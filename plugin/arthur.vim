@@ -45,20 +45,3 @@ filetype plugin indent on                         "auto indent depending on file
 highlight OverLength ctermfg=red guifg=red
 2match OverLength /\%>80v.*\%<82v/
 
-
-" ******* DOC ********
-" Parameters to let g:netrw_browse_split = 4
-" 1 : open files in a new horizontal split,
-" 2 : open files in a new vertical split,
-" 3 : open files in a new tab,
-" 4 : open in previous window
-"
-" Command to LS in from vim :  ':! ls -lF'
-
-" **** Additional File Format *****
-" JSON
-autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
-
-" YAML
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
