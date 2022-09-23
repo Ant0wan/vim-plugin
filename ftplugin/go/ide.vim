@@ -7,7 +7,11 @@ let g:netrw_winsize = 15                          "set the width of the director
 
 set fillchars+=vert:\▏                            "set vertical separator characters
 
-highlight VertSplit cterm=NONE ctermfg=Darkgrey
+highlight VertSplit cterm=NONE ctermfg=Black
+highlight LineNr ctermfg=Darkgrey
+highlight Conditional ctermfg=Darkyellow
+highlight Boolean ctermfg=Cyan
+highlight Keyword ctermfg=LightBlue
 
 augroup VerticalExplorer
 	autocmd!
