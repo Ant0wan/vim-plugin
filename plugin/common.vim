@@ -32,6 +32,7 @@ filetype plugin indent on                         "auto indent depending on file
 highlight OverLength ctermfg=red guifg=red
 2match OverLength /\%>80v.*\%<82v/
 
+
 " Display Netrw on demand
 let g:netrw_altv = 0
 let g:netrw_banner = 0                            "remove the banner
@@ -40,4 +41,6 @@ let g:netrw_liststyle = 3                         "change the directory view in 
 let g:netrw_preview = 1
 let g:netrw_winsize = 15                          "set the width of the directory explorer
 set fillchars+=vert:\▏                            "set vertical separator characters
-nnoremap <leader>' :20Lexplore<CR>
+highlight VertSplit cterm=NONE ctermfg=White      "set separator background color
+"highlight LineNR ctermfg=White                    "set line number color
+nnoremap <leader>] :20Lexplore<CR>                "set shortcut to open Netrw
