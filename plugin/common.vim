@@ -44,3 +44,8 @@ set fillchars+=vert:\▏                            "set vertical separator char
 highlight VertSplit cterm=NONE ctermfg=White      "set separator background color
 "highlight LineNR ctermfg=White                    "set line number color
 nnoremap <leader>] :20Lexplore<CR>                "set shortcut to open Netrw
+augroup netrw_statusline
+  autocmd!
+  autocmd FileType netrw setlocal statusline=%#LineNr#\ %{fnamemodify(getcwd(),':~')}
+augroup END
+
