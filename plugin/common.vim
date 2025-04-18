@@ -43,9 +43,13 @@ let g:netrw_winsize = 15                          "set the width of the director
 set fillchars+=vert:\▏                            "set vertical separator characters
 highlight VertSplit cterm=NONE ctermfg=White      "set separator background color
 "highlight LineNR ctermfg=White                    "set line number color
-nnoremap <leader>] :20Lexplore<CR>                "set shortcut to open Netrw
+" set shortcut to open Netrw
+nnoremap <leader>] :20Lexplore<CR>
 augroup netrw_statusline
   autocmd!
   autocmd FileType netrw setlocal statusline=%#LineNr#\ %{fnamemodify(getcwd(),':~')}
 augroup END
 
+" Lint files
+" set shortcut to remove trailing whitespace
+nnoremap <Leader><Space> :%s/\s\+$//e<CR>
